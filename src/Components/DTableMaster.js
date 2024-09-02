@@ -130,7 +130,7 @@ function DTableMaster({
 					transition={{ delay: 0.5, type: "tween", stiffness: 100 }}
 					className="bg-transparent dark:bg-[#001529] py-3 sm:py-3 -mt-5"
 				>
-					<div className="flex items-center h-14 -mt-[68px] w-auto dark:bg-[#22543d] md:flex-row space-y-3 md:space-y-0 rounded-lg">
+					<div className="flex items-center h-14 -mt-4 w-auto md:flex-row space-y-3 md:space-y-0 rounded-lg">
 						{btnText && (
 							<motion.div
 								initial={{ opacity: 0, y: 50 }}
@@ -163,8 +163,8 @@ function DTableMaster({
 							onClick={() => print()}
 							className={
 								btnText
-									? "bg-white border-2 border-l-0 text-green-900 font-semibold text-lg rounded-r-full p-0.5 shadow-lg"
-									: "bg-white border-2 border-l-0 text-green-900 font-semibold text-lg rounded-full h-10 w-10 p-0.5 shadow-lg"
+									? "bg-white border-2 border-l-0 text-red-800 font-semibold text-lg rounded-r-full p-0.5 shadow-lg"
+									: "bg-white border-2 border-l-0 text-red-800 font-semibold text-lg rounded-full h-10 w-10 p-0.5 shadow-lg"
 							}
 						>
 							<Tooltip title="Print this table" arrow>

@@ -19,7 +19,7 @@ axios_instance.interceptors.request.use(
 		// if(!LoaderAccessProvider.loading){
 		//     LoaderAccessProvider.setLoader(true)
 		// }
-		<Loader hidden={true} />
+		;<Loader hidden={true} />
 		console.log(response_count)
 
 		return config

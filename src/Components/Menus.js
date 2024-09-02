@@ -54,7 +54,7 @@ function Menus({ theme }) {
 			label: <Link to={""}>Dashboard </Link>,
 		},
 		{
-			label: "Masters",
+			label: "Loan",
 			key: "sub2",
 			icon: <DatabaseOutlined />,
 			children: [
@@ -161,87 +161,87 @@ function Menus({ theme }) {
 				// }
 			],
 		},
-		{
-			label: <Link to={routePaths.TESTCERTHOME}>Upload Test Certificate</Link>,
-			key: "uploadtc-purchase-order",
-			icon: <UploadFileOutlined />,
-		},
-		{
-			label: <Link to={routePaths.MDCCHOME}>Upload MDCC</Link>,
-			key: "mdcc-purchase-order",
-			icon: <UploadFileOutlined />,
-		},
-		{
-			label: "Delivery",
-			key: "material-delivery",
-			icon: <TruckOutlined />,
-			children: [
-				{
-					label: <Link to={routePaths.DELIVERYCUSTOMERVIEW}>To Customer</Link>,
-					key: "to-cus",
-					icon: <UserOutlined />,
-				},
+		// {
+		// 	label: <Link to={routePaths.TESTCERTHOME}>Upload Test Certificate</Link>,
+		// 	key: "uploadtc-purchase-order",
+		// 	icon: <UploadFileOutlined />,
+		// },
+		// {
+		// 	label: <Link to={routePaths.MDCCHOME}>Upload MDCC</Link>,
+		// 	key: "mdcc-purchase-order",
+		// 	icon: <UploadFileOutlined />,
+		// },
+		// {
+		// 	label: "Delivery",
+		// 	key: "material-delivery",
+		// 	icon: <TruckOutlined />,
+		// 	children: [
+		// 		{
+		// 			label: <Link to={routePaths.DELIVERYCUSTOMERVIEW}>To Customer</Link>,
+		// 			key: "to-cus",
+		// 			icon: <UserOutlined />,
+		// 		},
 
-				{
-					label: <Link to={routePaths.STOCKASSIGNVIEW}>To Warehouse</Link>,
-					key: "to-ware",
-					icon: <ShopOutlined />,
-				},
-			],
-		},
-		{
-			label: "Stock",
-			key: "sub5",
-			icon: <DropboxOutlined />,
-			children: [
-				{
-					label: <Link to={routePaths.STOCKUPDATE}>Open/Update Stock</Link>,
-					key: "stock-update",
-					icon: <DropboxOutlined />,
-				},
+		// 		{
+		// 			label: <Link to={routePaths.STOCKASSIGNVIEW}>To Warehouse</Link>,
+		// 			key: "to-ware",
+		// 			icon: <ShopOutlined />,
+		// 		},
+		// 	],
+		// },
+		// {
+		// 	label: "Stock",
+		// 	key: "sub5",
+		// 	icon: <DropboxOutlined />,
+		// 	children: [
+		// 		{
+		// 			label: <Link to={routePaths.STOCKUPDATE}>Open/Update Stock</Link>,
+		// 			key: "stock-update",
+		// 			icon: <DropboxOutlined />,
+		// 		},
 
-				{
-					label: <Link to={routePaths.STOCKASSIGNVIEW}>Assign</Link>,
-					key: "stock-assign",
-					icon: <ReconciliationOutlined />,
-				},
-				{
-					label: <Link to={routePaths.STOCKINVIEW}>Stock In</Link>,
-					key: "stock-in",
-					icon: <ArrowRightOutlined />,
-				},
-				{
-					label: <Link to={routePaths.STOCKOUTVIEW}>Stock Out</Link>,
-					key: "stock-out",
-					icon: <ArrowLeftOutlined />,
-				},
-				{
-					label: "Transfer",
-					key: "stock-trans",
-					icon: <SwapOutlined />,
-					children: [
-						{
-							label: (
-								<Link to={routePaths.REQUISITIONSENTVIEW}>
-									Requisitions sent
-								</Link>
-							),
-							key: "req-mk",
-							icon: <NodeExpandOutlined />,
-						},
-						{
-							label: (
-								<Link to={routePaths.REQUISITIONRCVDVIEW}>
-									Requisitions received
-								</Link>
-							),
-							key: "req-rec",
-							icon: <NodeCollapseOutlined />,
-						},
-					],
-				},
-			],
-		},
+		// 		{
+		// 			label: <Link to={routePaths.STOCKASSIGNVIEW}>Assign</Link>,
+		// 			key: "stock-assign",
+		// 			icon: <ReconciliationOutlined />,
+		// 		},
+		// 		{
+		// 			label: <Link to={routePaths.STOCKINVIEW}>Stock In</Link>,
+		// 			key: "stock-in",
+		// 			icon: <ArrowRightOutlined />,
+		// 		},
+		// 		{
+		// 			label: <Link to={routePaths.STOCKOUTVIEW}>Stock Out</Link>,
+		// 			key: "stock-out",
+		// 			icon: <ArrowLeftOutlined />,
+		// 		},
+		// 		{
+		// 			label: "Transfer",
+		// 			key: "stock-trans",
+		// 			icon: <SwapOutlined />,
+		// 			children: [
+		// 				{
+		// 					label: (
+		// 						<Link to={routePaths.REQUISITIONSENTVIEW}>
+		// 							Requisitions sent
+		// 						</Link>
+		// 					),
+		// 					key: "req-mk",
+		// 					icon: <NodeExpandOutlined />,
+		// 				},
+		// 				{
+		// 					label: (
+		// 						<Link to={routePaths.REQUISITIONRCVDVIEW}>
+		// 							Requisitions received
+		// 						</Link>
+		// 					),
+		// 					key: "req-rec",
+		// 					icon: <NodeCollapseOutlined />,
+		// 				},
+		// 			],
+		// 		},
+		// 	],
+		// },
 
 		{
 			label: "Reports",
