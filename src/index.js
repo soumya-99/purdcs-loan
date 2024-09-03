@@ -12,88 +12,91 @@ import Loader from "./Components/Loader"
 
 import CircularProgress from "@mui/material/CircularProgress"
 import CatchError from "./Screens/CatchError"
-import ChooseComp from "./Screens/Choose/ChooseComp"
-import UserChoose from "./Screens/Choose/UserChoose"
+const ChooseComp = lazy(() => import("./Screens/Choose/ChooseComp"))
+const UserChoose = lazy(() => import("./Screens/Choose/UserChoose"))
+const LoanComp = lazy(() => import("./Screens/LoanForm/LoanComp"))
+const LoanView = lazy(() => import("./Screens/LoanForm/LoanView"))
+const LoanForm = lazy(() => import("./Screens/LoanForm/LoanForm"))
 
 const root = ReactDOM.createRoot(document.getElementById("root"))
-const Home = lazy(() => import("./Screens/Homescreen/Home"))
-const HomeScreen = lazy(() => import("./Screens/Homescreen/HomeScreen"))
-const ForgotPass = lazy(() => import("./Screens/Auth/ForgotPass"))
-const Signup = lazy(() => import("./Screens/Auth/Signup"))
-const Signin = lazy(() => import("./Screens/Auth/Signin"))
-const NotificationComp = lazy(() =>
-	import("./Screens/Notifications/NotificationComp")
-)
-const NotificationView = lazy(() =>
-	import("./Screens/Notifications/NotificationView")
-)
+// const Home = lazy(() => import("./Screens/Homescreen/Home"))
+// const HomeScreen = lazy(() => import("./Screens/Homescreen/HomeScreen"))
+// const ForgotPass = lazy(() => import("./Screens/Auth/ForgotPass"))
+// const Signup = lazy(() => import("./Screens/Auth/Signup"))
+// const Signin = lazy(() => import("./Screens/Auth/Signin"))
+// const NotificationComp = lazy(() =>
+// 	import("./Screens/Notifications/NotificationComp")
+// )
+// const NotificationView = lazy(() =>
+// 	import("./Screens/Notifications/NotificationView")
+// )
 
-const MastersComp = lazy(() => import("./Screens/Masters/MastersComp"))
-const UserComp = lazy(() => import("./Screens/Masters/Users/UserComp"))
-const UserView = lazy(() => import("./Screens/Masters/Users/UserView"))
-const UserAddForm = lazy(() => import("./Screens/Masters/Users/UserAddForm"))
+// const MastersComp = lazy(() => import("./Screens/Masters/MastersComp"))
+// const UserComp = lazy(() => import("./Screens/Masters/Users/UserComp"))
+// const UserView = lazy(() => import("./Screens/Masters/Users/UserView"))
+// const UserAddForm = lazy(() => import("./Screens/Masters/Users/UserAddForm"))
 
-const ClientComp = lazy(() => import("./Screens/Masters/Clients/ClientComp"))
-const ClientView = lazy(() => import("./Screens/Masters/Clients/ClientView"))
-const ClientForm = lazy(() => import("./Screens/Masters/Clients/ClientForm"))
+// const ClientComp = lazy(() => import("./Screens/Masters/Clients/ClientComp"))
+// const ClientView = lazy(() => import("./Screens/Masters/Clients/ClientView"))
+// const ClientForm = lazy(() => import("./Screens/Masters/Clients/ClientForm"))
 
-const ProjectComp = lazy(() => import("./Screens/Masters/Projects/ProjectComp"))
-const ProjectView = lazy(() => import("./Screens/Masters/Projects/ProjectView"))
-const ProjectForm = lazy(() => import("./Screens/Masters/Projects/ProjectForm"))
+// const ProjectComp = lazy(() => import("./Screens/Masters/Projects/ProjectComp"))
+// const ProjectView = lazy(() => import("./Screens/Masters/Projects/ProjectView"))
+// const ProjectForm = lazy(() => import("./Screens/Masters/Projects/ProjectForm"))
 
-const ProductComp = lazy(() => import("./Screens/Masters/Products/ProductComp"))
-const ProductView = lazy(() => import("./Screens/Masters/Products/ProductView"))
-const ProductForm = lazy(() => import("./Screens/Masters/Products/ProductForm"))
+// const ProductComp = lazy(() => import("./Screens/Masters/Products/ProductComp"))
+// const ProductView = lazy(() => import("./Screens/Masters/Products/ProductView"))
+// const ProductForm = lazy(() => import("./Screens/Masters/Products/ProductForm"))
 
-const VendorComp = lazy(() => import("./Screens/Masters/Vendors/VendorComp"))
-const VendorView = lazy(() => import("./Screens/Masters/Vendors/VendorView"))
-const VendorForm = lazy(() => import("./Screens/Masters/Vendors/VendorForm"))
+// const VendorComp = lazy(() => import("./Screens/Masters/Vendors/VendorComp"))
+// const VendorView = lazy(() => import("./Screens/Masters/Vendors/VendorView"))
+// const VendorForm = lazy(() => import("./Screens/Masters/Vendors/VendorForm"))
 
-const CategoryComp = lazy(() =>
-	import("./Screens/Masters/Categories/CategoryComp")
-)
-const CategoryView = lazy(() =>
-	import("./Screens/Masters/Categories/CategoryView")
-)
-const CategoryForm = lazy(() =>
-	import("./Screens/Masters/Categories/CategoryForm")
-)
+// const CategoryComp = lazy(() =>
+// 	import("./Screens/Masters/Categories/CategoryComp")
+// )
+// const CategoryView = lazy(() =>
+// 	import("./Screens/Masters/Categories/CategoryView")
+// )
+// const CategoryForm = lazy(() =>
+// 	import("./Screens/Masters/Categories/CategoryForm")
+// )
 
-const UnitComp = lazy(() => import("./Screens/Masters/Units/UnitComp"))
-const UnitView = lazy(() => import("./Screens/Masters/Units/UnitView"))
-const UnitForm = lazy(() => import("./Screens/Masters/Units/UnitForm"))
+// const UnitComp = lazy(() => import("./Screens/Masters/Units/UnitComp"))
+// const UnitView = lazy(() => import("./Screens/Masters/Units/UnitView"))
+// const UnitForm = lazy(() => import("./Screens/Masters/Units/UnitForm"))
 
-const DeptComp = lazy(() => import("./Screens/Masters/Department/DeptComp"))
-const DeptView = lazy(() => import("./Screens/Masters/Department/DeptView"))
-const DeptForm = lazy(() => import("./Screens/Masters/Department/DeptForm"))
+// const DeptComp = lazy(() => import("./Screens/Masters/Department/DeptComp"))
+// const DeptView = lazy(() => import("./Screens/Masters/Department/DeptView"))
+// const DeptForm = lazy(() => import("./Screens/Masters/Department/DeptForm"))
 
-const GstComp = lazy(() => import("./Screens/Masters/Gst/GstComp"))
-const GstView = lazy(() => import("./Screens/Masters/Gst/GstView"))
-const GstForm = lazy(() => import("./Screens/Masters/Gst/GstForm"))
+// const GstComp = lazy(() => import("./Screens/Masters/Gst/GstComp"))
+// const GstView = lazy(() => import("./Screens/Masters/Gst/GstView"))
+// const GstForm = lazy(() => import("./Screens/Masters/Gst/GstForm"))
 
-const ApproveOrders = lazy(() =>
-	import("./Screens/Purchase Order/ApproveOrders")
-)
+// const ApproveOrders = lazy(() =>
+// 	import("./Screens/Purchase Order/ApproveOrders")
+// )
 
-const UploadTC = lazy(() =>
-	import("./Screens/Purchase Order/UploadTC/UploadTC")
-)
-const UploadTCView = lazy(() =>
-	import("./Screens/Purchase Order/UploadTC/UploadTCView")
-)
-const UploadTCForm = lazy(() =>
-	import("./Screens/Purchase Order/UploadTC/UploadTCForm")
-)
+// const UploadTC = lazy(() =>
+// 	import("./Screens/Purchase Order/UploadTC/UploadTC")
+// )
+// const UploadTCView = lazy(() =>
+// 	import("./Screens/Purchase Order/UploadTC/UploadTCView")
+// )
+// const UploadTCForm = lazy(() =>
+// 	import("./Screens/Purchase Order/UploadTC/UploadTCForm")
+// )
 
-const DesignationComp = lazy(() =>
-	import("./Screens/Masters/Designation/DesignationComp")
-)
-const DesignationView = lazy(() =>
-	import("./Screens/Masters/Designation/DesignationView")
-)
-const DesignationForm = lazy(() =>
-	import("./Screens/Masters/Designation/DesignationForm")
-)
+// const DesignationComp = lazy(() =>
+// 	import("./Screens/Masters/Designation/DesignationComp")
+// )
+// const DesignationView = lazy(() =>
+// 	import("./Screens/Masters/Designation/DesignationView")
+// )
+// const DesignationForm = lazy(() =>
+// 	import("./Screens/Masters/Designation/DesignationForm")
+// )
 
 // const PurchaseOrderComp = lazy(() =>
 // 	import("./Screens/Purchase Order/PurchaseOrderComp")
@@ -197,352 +200,362 @@ const router = createBrowserRouter([
 						path: "",
 						element: <UserChoose />,
 					},
-					// {
-					// 	path: "signup",
-					// 	element: <Signup />,
-					// },
+					{
+						path: "loan",
+						element: <LoanComp />,
+						children: [
+							{
+								path: "loanview",
+								element: <LoanView />,
+							},
+							{
+								path: "loanform",
+								element: <LoanForm />,
+							},
+						],
+					},
 					// {
 					// 	path: "forgotpassword",
 					// 	element: <ForgotPass />,
 					// },
 				],
 			},
-			{
-				path: "home",
-				element: <Home />,
-				children: [
-					{
-						path: "",
-						element: <HomeScreen />,
-					},
-					{
-						path: "notificationComp",
-						element: <NotificationComp />,
-						children: [
-							{
-								path: "notifications",
-								element: <NotificationView />,
-							},
-						],
-					},
-					{
-						path: "loanComp",
-						element: <MastersComp />,
-						children: [
-							{
-								path: "users",
-								element: <UserComp />,
-								children: [
-									{
-										path: "",
-										element: <UserView />,
-									},
-									{
-										path: "useraddform/:id",
-										element: <UserAddForm />,
-									},
-								],
-							},
-							{
-								path: "clients",
-								element: <ClientComp />,
-								children: [
-									{
-										path: "",
-										element: <ClientView />,
-									},
-									{
-										path: "clientaddform/:id",
-										element: <ClientForm />,
-									},
-								],
-							},
-							{
-								path: "Gst",
-								element: <GstComp />,
-								children: [
-									{
-										path: "",
-										element: <GstView />,
-									},
-									{
-										path: "gstaddform/:id",
-										element: <GstForm />,
-									},
-								],
-							},
-							{
-								path: "designations",
-								element: <DesignationComp />,
-								children: [
-									{
-										path: "",
-										element: <DesignationView />,
-									},
-									{
-										path: "designationaddform/:id",
-										element: <DesignationForm />,
-									},
-								],
-							},
-							// {
-							//   path: "projects",
-							//   element: <ProjectComp />,
-							//   children: [
-							//     {
-							//       path: "",
-							//       element: <ProjectView />,
-							//     },
-							//     {
-							//       path: "projectaddform/:id",
-							//       element: <ProjectForm />,
-							//     },
-							//   ],
-							// },
-							{
-								path: "products",
-								element: <ProductComp />,
-								children: [
-									{
-										path: "",
-										element: <ProductView />,
-									},
-									{
-										path: "productaddform/:id",
-										element: <ProductForm />,
-									},
-								],
-							},
-							,
-							{
-								path: "units",
-								element: <UnitComp />,
-								children: [
-									{
-										path: "",
-										element: <UnitView />,
-									},
-									{
-										path: "unitaddform/:id",
-										element: <UnitForm />,
-									},
-								],
-							},
-							{
-								path: "vendors",
-								element: <VendorComp />,
-								children: [
-									{
-										path: "",
-										element: <VendorView />,
-									},
-									{
-										path: "vendoraddform/:id",
-										element: <VendorForm />,
-									},
-								],
-							},
-							{
-								path: "departments",
-								element: <DeptComp />,
-								children: [
-									{
-										path: "",
-										element: <DeptView />,
-									},
-									{
-										path: "departmentaddform/:id",
-										element: <DeptForm />,
-									},
-								],
-							},
-							{
-								path: "categories",
-								element: <CategoryComp />,
-								children: [
-									{
-										path: "",
-										element: <CategoryView />,
-									},
-									{
-										path: "categoryform/:id",
-										element: <CategoryForm />,
-									},
-								],
-							},
-						],
-					},
-					// {
-					// 	path: "poComp",
-					// 	element: <PurchaseOrderComp />,
-					// 	children: [
-					// 		{
-					// 			path: "clientorder",
-					// 			element: <OrderView />,
-					// 		},
-					// 		{
-					// 			path: "orderform/:id",
-					// 			element: <OrderForm />,
-					// 		},
-					// 		{
-					// 			path: "projects",
-					// 			element: <ProjectComp />,
-					// 			children: [
-					// 				{
-					// 					path: "",
-					// 					element: <ProjectView />,
-					// 				},
-					// 				{
-					// 					path: "projectaddform/:id",
-					// 					element: <ProjectForm />,
-					// 				},
-					// 			],
-					// 		},
-					// 		{
-					// 			path: "purchaseorder/:flag",
-					// 			element: <PurchaseOrderView />,
-					// 		},
-					// 		{
-					// 			path: "approveorders",
-					// 			element: <ApproveOrders />,
-					// 		},
-					// 		{
-					// 			path: "purchaseorderform/:flag/:id",
-					// 			element: <PurchaseOrderForm />,
-					// 		},
-					// 		{
-					// 			path: "existingorder",
-					// 			element: <ExistingPoView />,
-					// 		},
-					// 		{
-					// 			path: "amendorder",
-					// 			element: <AmendView />,
-					// 		},
-					// 		{
-					// 			path: "uploadtc",
-					// 			element: <UploadTC />,
-					// 			children: [
-					// 				{
-					// 					path: "",
-					// 					element: <UploadTCView />,
-					// 				},
-					// 				{
-					// 					path: "upload/:id",
-					// 					element: <UploadTCForm />,
-					// 				},
-					// 			],
-					// 		},
-					// 		{
-					// 			path: "uploadmdcc",
-					// 			element: <MDCC />,
-					// 			children: [
-					// 				{
-					// 					path: "",
-					// 					element: <MDCCView />,
-					// 				},
-					// 				{
-					// 					path: "mdccupload/:id",
-					// 					element: <MDCCForm />,
-					// 				},
-					// 			],
-					// 		},
-					// 		{
-					// 			path: "cancelorder",
-					// 			element: <CancelPO />,
-					// 			children: [
-					// 				{
-					// 					path: "",
-					// 					element: <CancelView />,
-					// 				},
-					// 				{
-					// 					path: "cancelorderform/:id",
-					// 					element: <CancelForm />,
-					// 				},
-					// 			],
-					// 		},
-					// 	],
-					// },
-					// {
-					// 	path: "deliveryComp",
-					// 	element: <ToCustomer />,
-					// 	children: [
-					// 		{
-					// 			path: "deliverycustomerview",
-					// 			element: <ToCustomerView />,
-					// 		},
-					// 		{
-					// 			path: "deliverycustomerform/:id",
-					// 			element: <ToCustomerForm />,
-					// 		},
-					// 	],
-					// },
-					// {
-					// 	path: "stockComp",
-					// 	element: <StockComp />,
-					// 	children: [
-					// 		{
-					// 			path: "updatestock",
-					// 			element: <UpdateStock />,
-					// 			children: [
-					// 				{
-					// 					path: "",
-					// 					element: <UpdateStockView />,
-					// 				},
-					// 				{
-					// 					path: "stockupdateform/:id",
-					// 					element: <UpdateStockForm />,
-					// 				},
-					// 			],
-					// 		},
-					// 		{
-					// 			path: "stockinview",
-					// 			element: <StockInView />,
-					// 		},
-					// 		{
-					// 			path: "stockinform/:id",
-					// 			element: <StockInForm />,
-					// 		},
-					// 		{
-					// 			path: "stockoutview",
-					// 			element: <StockOutView />,
-					// 		},
-					// 		{
-					// 			path: "stockoutform/:id",
-					// 			element: <StockOutForm />,
-					// 		},
-					// 		,
-					// 		{
-					// 			path: "stockassignview",
-					// 			element: <StockAssignView />,
-					// 		},
-					// 		{
-					// 			path: "stockassignform/:id",
-					// 			element: <StockAssignForm />,
-					// 		},
-					// 		{
-					// 			path: "requisitionssentview",
-					// 			element: <RequisitionSentView />,
-					// 		},
-					// 		{
-					// 			path: "requisitionsrcvdview",
-					// 			element: <RequisitionRcvdView />,
-					// 		},
-					// 		{
-					// 			path: "requisitionssendform/:id",
-					// 			element: <ReqSendForm />,
-					// 		},
-					// 		{
-					// 			path: "requisitionsrcvdform/:id",
-					// 			element: <ReqRcvdForm />,
-					// 		},
-					// 	],
-					// },
-					// {
-					// 	path: "details",
-					// 	element: <Details />,
-					// },
-				],
-			},
+			// {
+			// 	path: "home",
+			// 	element: <Home />,
+			// 	children: [
+			// 		{
+			// 			path: "",
+			// 			element: <HomeScreen />,
+			// 		},
+			// 		{
+			// 			path: "notificationComp",
+			// 			element: <NotificationComp />,
+			// 			children: [
+			// 				{
+			// 					path: "notifications",
+			// 					element: <NotificationView />,
+			// 				},
+			// 			],
+			// 		},
+			// 		{
+			// 			path: "loanComp",
+			// 			element: <MastersComp />,
+			// 			children: [
+			// 				{
+			// 					path: "users",
+			// 					element: <UserComp />,
+			// 					children: [
+			// 						{
+			// 							path: "",
+			// 							element: <UserView />,
+			// 						},
+			// 						{
+			// 							path: "useraddform/:id",
+			// 							element: <UserAddForm />,
+			// 						},
+			// 					],
+			// 				},
+			// 				{
+			// 					path: "clients",
+			// 					element: <ClientComp />,
+			// 					children: [
+			// 						{
+			// 							path: "",
+			// 							element: <ClientView />,
+			// 						},
+			// 						{
+			// 							path: "clientaddform/:id",
+			// 							element: <ClientForm />,
+			// 						},
+			// 					],
+			// 				},
+			// 				{
+			// 					path: "Gst",
+			// 					element: <GstComp />,
+			// 					children: [
+			// 						{
+			// 							path: "",
+			// 							element: <GstView />,
+			// 						},
+			// 						{
+			// 							path: "gstaddform/:id",
+			// 							element: <GstForm />,
+			// 						},
+			// 					],
+			// 				},
+			// 				{
+			// 					path: "designations",
+			// 					element: <DesignationComp />,
+			// 					children: [
+			// 						{
+			// 							path: "",
+			// 							element: <DesignationView />,
+			// 						},
+			// 						{
+			// 							path: "designationaddform/:id",
+			// 							element: <DesignationForm />,
+			// 						},
+			// 					],
+			// 				},
+			// 				// {
+			// 				//   path: "projects",
+			// 				//   element: <ProjectComp />,
+			// 				//   children: [
+			// 				//     {
+			// 				//       path: "",
+			// 				//       element: <ProjectView />,
+			// 				//     },
+			// 				//     {
+			// 				//       path: "projectaddform/:id",
+			// 				//       element: <ProjectForm />,
+			// 				//     },
+			// 				//   ],
+			// 				// },
+			// 				{
+			// 					path: "products",
+			// 					element: <ProductComp />,
+			// 					children: [
+			// 						{
+			// 							path: "",
+			// 							element: <ProductView />,
+			// 						},
+			// 						{
+			// 							path: "productaddform/:id",
+			// 							element: <ProductForm />,
+			// 						},
+			// 					],
+			// 				},
+			// 				,
+			// 				{
+			// 					path: "units",
+			// 					element: <UnitComp />,
+			// 					children: [
+			// 						{
+			// 							path: "",
+			// 							element: <UnitView />,
+			// 						},
+			// 						{
+			// 							path: "unitaddform/:id",
+			// 							element: <UnitForm />,
+			// 						},
+			// 					],
+			// 				},
+			// 				{
+			// 					path: "vendors",
+			// 					element: <VendorComp />,
+			// 					children: [
+			// 						{
+			// 							path: "",
+			// 							element: <VendorView />,
+			// 						},
+			// 						{
+			// 							path: "vendoraddform/:id",
+			// 							element: <VendorForm />,
+			// 						},
+			// 					],
+			// 				},
+			// 				{
+			// 					path: "departments",
+			// 					element: <DeptComp />,
+			// 					children: [
+			// 						{
+			// 							path: "",
+			// 							element: <DeptView />,
+			// 						},
+			// 						{
+			// 							path: "departmentaddform/:id",
+			// 							element: <DeptForm />,
+			// 						},
+			// 					],
+			// 				},
+			// 				{
+			// 					path: "categories",
+			// 					element: <CategoryComp />,
+			// 					children: [
+			// 						{
+			// 							path: "",
+			// 							element: <CategoryView />,
+			// 						},
+			// 						{
+			// 							path: "categoryform/:id",
+			// 							element: <CategoryForm />,
+			// 						},
+			// 					],
+			// 				},
+			// 			],
+			// 		},
+			// 		// {
+			// 		// 	path: "poComp",
+			// 		// 	element: <PurchaseOrderComp />,
+			// 		// 	children: [
+			// 		// 		{
+			// 		// 			path: "clientorder",
+			// 		// 			element: <OrderView />,
+			// 		// 		},
+			// 		// 		{
+			// 		// 			path: "orderform/:id",
+			// 		// 			element: <OrderForm />,
+			// 		// 		},
+			// 		// 		{
+			// 		// 			path: "projects",
+			// 		// 			element: <ProjectComp />,
+			// 		// 			children: [
+			// 		// 				{
+			// 		// 					path: "",
+			// 		// 					element: <ProjectView />,
+			// 		// 				},
+			// 		// 				{
+			// 		// 					path: "projectaddform/:id",
+			// 		// 					element: <ProjectForm />,
+			// 		// 				},
+			// 		// 			],
+			// 		// 		},
+			// 		// 		{
+			// 		// 			path: "purchaseorder/:flag",
+			// 		// 			element: <PurchaseOrderView />,
+			// 		// 		},
+			// 		// 		{
+			// 		// 			path: "approveorders",
+			// 		// 			element: <ApproveOrders />,
+			// 		// 		},
+			// 		// 		{
+			// 		// 			path: "purchaseorderform/:flag/:id",
+			// 		// 			element: <PurchaseOrderForm />,
+			// 		// 		},
+			// 		// 		{
+			// 		// 			path: "existingorder",
+			// 		// 			element: <ExistingPoView />,
+			// 		// 		},
+			// 		// 		{
+			// 		// 			path: "amendorder",
+			// 		// 			element: <AmendView />,
+			// 		// 		},
+			// 		// 		{
+			// 		// 			path: "uploadtc",
+			// 		// 			element: <UploadTC />,
+			// 		// 			children: [
+			// 		// 				{
+			// 		// 					path: "",
+			// 		// 					element: <UploadTCView />,
+			// 		// 				},
+			// 		// 				{
+			// 		// 					path: "upload/:id",
+			// 		// 					element: <UploadTCForm />,
+			// 		// 				},
+			// 		// 			],
+			// 		// 		},
+			// 		// 		{
+			// 		// 			path: "uploadmdcc",
+			// 		// 			element: <MDCC />,
+			// 		// 			children: [
+			// 		// 				{
+			// 		// 					path: "",
+			// 		// 					element: <MDCCView />,
+			// 		// 				},
+			// 		// 				{
+			// 		// 					path: "mdccupload/:id",
+			// 		// 					element: <MDCCForm />,
+			// 		// 				},
+			// 		// 			],
+			// 		// 		},
+			// 		// 		{
+			// 		// 			path: "cancelorder",
+			// 		// 			element: <CancelPO />,
+			// 		// 			children: [
+			// 		// 				{
+			// 		// 					path: "",
+			// 		// 					element: <CancelView />,
+			// 		// 				},
+			// 		// 				{
+			// 		// 					path: "cancelorderform/:id",
+			// 		// 					element: <CancelForm />,
+			// 		// 				},
+			// 		// 			],
+			// 		// 		},
+			// 		// 	],
+			// 		// },
+			// 		// {
+			// 		// 	path: "deliveryComp",
+			// 		// 	element: <ToCustomer />,
+			// 		// 	children: [
+			// 		// 		{
+			// 		// 			path: "deliverycustomerview",
+			// 		// 			element: <ToCustomerView />,
+			// 		// 		},
+			// 		// 		{
+			// 		// 			path: "deliverycustomerform/:id",
+			// 		// 			element: <ToCustomerForm />,
+			// 		// 		},
+			// 		// 	],
+			// 		// },
+			// 		// {
+			// 		// 	path: "stockComp",
+			// 		// 	element: <StockComp />,
+			// 		// 	children: [
+			// 		// 		{
+			// 		// 			path: "updatestock",
+			// 		// 			element: <UpdateStock />,
+			// 		// 			children: [
+			// 		// 				{
+			// 		// 					path: "",
+			// 		// 					element: <UpdateStockView />,
+			// 		// 				},
+			// 		// 				{
+			// 		// 					path: "stockupdateform/:id",
+			// 		// 					element: <UpdateStockForm />,
+			// 		// 				},
+			// 		// 			],
+			// 		// 		},
+			// 		// 		{
+			// 		// 			path: "stockinview",
+			// 		// 			element: <StockInView />,
+			// 		// 		},
+			// 		// 		{
+			// 		// 			path: "stockinform/:id",
+			// 		// 			element: <StockInForm />,
+			// 		// 		},
+			// 		// 		{
+			// 		// 			path: "stockoutview",
+			// 		// 			element: <StockOutView />,
+			// 		// 		},
+			// 		// 		{
+			// 		// 			path: "stockoutform/:id",
+			// 		// 			element: <StockOutForm />,
+			// 		// 		},
+			// 		// 		,
+			// 		// 		{
+			// 		// 			path: "stockassignview",
+			// 		// 			element: <StockAssignView />,
+			// 		// 		},
+			// 		// 		{
+			// 		// 			path: "stockassignform/:id",
+			// 		// 			element: <StockAssignForm />,
+			// 		// 		},
+			// 		// 		{
+			// 		// 			path: "requisitionssentview",
+			// 		// 			element: <RequisitionSentView />,
+			// 		// 		},
+			// 		// 		{
+			// 		// 			path: "requisitionsrcvdview",
+			// 		// 			element: <RequisitionRcvdView />,
+			// 		// 		},
+			// 		// 		{
+			// 		// 			path: "requisitionssendform/:id",
+			// 		// 			element: <ReqSendForm />,
+			// 		// 		},
+			// 		// 		{
+			// 		// 			path: "requisitionsrcvdform/:id",
+			// 		// 			element: <ReqRcvdForm />,
+			// 		// 		},
+			// 		// 	],
+			// 		// },
+			// 		// {
+			// 		// 	path: "details",
+			// 		// 	element: <Details />,
+			// 		// },
+			// 	],
+			// },
 		],
 	},
 	{
@@ -554,6 +567,7 @@ const router = createBrowserRouter([
 		element: <Notfound />,
 	},
 ])
+
 root.render(
 	<Democontext>
 		<Suspense

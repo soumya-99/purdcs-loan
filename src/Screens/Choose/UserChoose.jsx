@@ -1,19 +1,10 @@
 import React, { useState } from "react"
-import * as Yup from "yup"
 import { Link } from "react-router-dom"
-import { useFormik } from "formik"
 import { useNavigate } from "react-router-dom"
 import IMG from "../../Assets/Images/puri_flyer.jpg"
 import LOGO from "../../Assets/Images/purdcs.png"
-import { routePaths } from "../../Assets/Data/Routes"
-import VError from "../../Components/VError"
-import TDInputTemplate from "../../Components/TDInputTemplate"
-import axios from "axios"
-import { Spin } from "antd"
-import { LoadingOutlined } from "@ant-design/icons"
-import { url } from "../../Address/BaseUrl"
-import { Message } from "../../Components/Message"
 import { motion } from "framer-motion"
+import { routePaths } from "../../Assets/Data/Routes"
 
 function UserChoose() {
 	const navigate = useNavigate()
@@ -31,30 +22,36 @@ function UserChoose() {
 				initial={{ opacity: 0 }}
 				animate={{ opacity: 1 }}
 				transition={{ delay: 0.5, type: "spring" }}
-				className="grid grid-cols-2 gap-0 h-auto w-5/6"
+				className="grid grid-cols-2 gap-0 h-auto w-4/5"
 			>
 				{/* <div className="sm:p-5 sm:block rounded-l-3xl bg-gradient-to-r from-white from-60% via-sky-500 via-30% to-[#ffffff8c] to-10%"> */}
-				<div className="sm:p-5 sm:block rounded-l-3xl bg-gradient-to-r from-yellow-50 from-10% via-gray-50 via-70% to-[#ffffff8c] to-90%">
+				<div className="sm:p-5 sm:block rounded-l-3xl border-white border--0 bg-gradient-to-r from-yellow-50 from-10% via-gray-50 via-70% to-[#ffffff8c] to-90%">
 					<div className="h-auto w-auto mx-auto bg-transparent rounded-lg p-1">
 						<img src={LOGO} className="h-40 w-40" />
 					</div>
 				</div>
 				<div
-					className={`sm:p-5 sm:rounded-r-3xl border-white border-l-0 border-2 grid grid-cols-2 gap-4`}
+					className={`sm:p-5 sm:rounded-r-3xl border-white border-l-0 border-2 w-auto h-auto`}
 					style={{
 						backgroundColor: "rgba(255, 255, 255, 0.55)",
 						backdropFilter: "blur(8px)",
+						display: "flex",
+						justifyContent: "space-evenly",
+						alignItems: "center",
+						flexDirection: "column",
 					}}
 				>
 					<div className="sm:col-span-1">
-						<button className="h-48 w-48 self-center bg-red-600 rounded-lg p-1">
-							Icon Goes Here
-						</button>
+						<Link to={routePaths.LOAN_FORM}>
+							<div className="h-48 w-48 self-center bg-[#6457A6] rounded-full p-1">
+								Loan Form
+							</div>
+						</Link>
 					</div>
 					<div className="sm:col-span-1">
-						<button className="h-48 w-48 self-center bg-red-600 rounded-lg p-1">
+						<Link className="h-48 w-48 self-center bg-red-600 rounded-3xl p-1">
 							Icon Goes Here
-						</button>
+						</Link>
 					</div>
 				</div>
 			</motion.div>

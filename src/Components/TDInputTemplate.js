@@ -22,7 +22,7 @@ function TDInputTemplate(props) {
 					min={props.min}
 					accept={props.accept}
 					max={props.max}
-					className="bg-white border-gray-400 text-gray-800 text-sm rounded-md  focus:border-red-800 active:border-red-600 focus:ring-red-600 focus:border-1 duration-500 block w-full p-1 dark:bg-bg-white dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"
+					className="bg-white border-gray-400 text-gray-800 text-sm rounded-md  focus:border-red-800 active:border-red-600 focus:ring-red-600 focus:border-1 duration-500 block w-full p-2 dark:bg-bg-white dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"
 					placeholder={props.placeholder}
 					onChange={props.handleChange}
 					onBlur={props.handleBlur}
@@ -55,7 +55,7 @@ function TDInputTemplate(props) {
 				// />
 				<select
 					id="countries"
-					className="bg-white border-1 border-gray-400 text-gray-800 text-sm rounded-lg  focus:border-red-800 active:border-red-600 focus:ring-red-600 focus:border-1 duration-500 block w-full p-1 dark:bg-bg-white dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"
+					className="bg-white border-1 border-gray-400 text-gray-800 text-sm rounded-lg  focus:border-red-800 active:border-red-600 focus:ring-red-600 focus:border-1 duration-500 block w-full p-2 dark:bg-bg-white dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"
 					value={props.formControlName}
 					onChange={props.handleChange}
 					name={props.name}
@@ -73,7 +73,7 @@ function TDInputTemplate(props) {
 			{props.mode == 3 && (
 				<textarea
 					rows="4"
-					className="bg-white border-1 border-gray-400 text-sm rounded-lg  focus:border-red-800 active:border-red-600 focus:ring-red-600 focus:border-1 duration-500 block w-full p-1.5 dark:bg-bg-white dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"
+					className="bg-white border-1 border-gray-400 text-sm rounded-lg  focus:border-red-800 active:border-red-600 focus:ring-red-600 focus:border-1 duration-500 block w-full p-2 dark:bg-bg-white dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"
 					name={props.name}
 					value={props.formControlName}
 					placeholder={props.placeholder}
