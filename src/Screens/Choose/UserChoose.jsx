@@ -5,6 +5,13 @@ import IMG from "../../Assets/Images/puri_flyer.jpg"
 import LOGO from "../../Assets/Images/purdcs.png"
 import { motion } from "framer-motion"
 import { routePaths } from "../../Assets/Data/Routes"
+import {
+	SaveOutlined,
+	DeleteOutlined,
+	ReloadOutlined,
+	DollarOutlined,
+	UserOutlined,
+} from "@ant-design/icons"
 
 function UserChoose() {
 	const navigate = useNavigate()
@@ -41,16 +48,38 @@ function UserChoose() {
 						flexDirection: "column",
 					}}
 				>
-					<div className="sm:col-span-1">
+					<div>
 						<Link to={routePaths.LOAN_FORM}>
-							<div className="h-48 w-48 self-center bg-[#6457A6] rounded-full p-1">
-								Loan Form
+							<div
+								className="h-48 w-48 self-center bg-[#6457A6] rounded-full p-1 text-white text-xl"
+								style={{
+									display: "flex",
+									justifyContent: "center",
+									alignItems: "center",
+									flexDirection: "column",
+									gap: 10,
+								}}
+							>
+								<DollarOutlined className="text-3xl" />
+								<div>Loan Form</div>
 							</div>
 						</Link>
 					</div>
-					<div className="sm:col-span-1">
-						<Link className="h-48 w-48 self-center bg-red-600 rounded-3xl p-1">
-							Icon Goes Here
+					<div>
+						<Link>
+							<div
+								className="h-48 w-48 self-center bg-[#586BA4] rounded-full p-1 text-white text-xl"
+								style={{
+									display: "flex",
+									justifyContent: "center",
+									alignItems: "center",
+									flexDirection: "column",
+									gap: 10,
+								}}
+							>
+								<UserOutlined className="text-3xl" />
+								<div>Admin Login</div>
+							</div>
 						</Link>
 					</div>
 				</div>
